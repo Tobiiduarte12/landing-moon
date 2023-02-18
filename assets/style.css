@@ -11,6 +11,10 @@ body {
     overflow-x: hidden;
     background: linear-gradient(#141516, #ffff);
 }
+body.dark {
+    background: #5f4403;
+
+}
 header {
     position: absolute;
     top: 0;
@@ -49,6 +53,48 @@ header ul li a:hover,
 header ul li a.active {
     background: #fff;
     color: #141516;
+}
+header .switch {
+    /* width: 60px;
+    height: 20px; */
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background: #59597a;
+    cursor: pointer;
+    border: none;
+}
+header .switch::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #ffff;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+}
+header .switch.active {
+    background: yellowgreen;
+    color: #141516;
+}
+header .switch.active::after {
+    right: 0;
+    left: unset;
+}
+header .switch span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #ffff;
 }
 #hero {
     position: relative;
