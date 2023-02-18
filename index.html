@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing-moon</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section id="hero">
+        <img src="./assets/img/images/stars.png" alt="" id="stars">
+        <img src="./assets/img/images/moon.png" id="moon">
+        <img src="./assets/img/images/mountains_behind.png" alt="" id="mountain-behind">
+        <h2 id="text"> Moon light</h2>
+        <a href="#" id="btn">Explore</a>
+        <img src="./assets/img/images/mountains_front.png" alt="" id="mountain-front">
+    </section>
+    <section id="sec-two">
+        <h2>Parallax scrolling effects</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda maiores esse, iure quas sequi cum sapiente similique placeat ipsa suscipit quia provident delectus veniam id amet debitis quidem, nemo nihil commodi repellendus adipisci architecto! Maxime officiis quam odio dolor odit itaque fugit alias laboriosam repudiandae molestias, perferendis perspiciatis, accusamus eum fugiat! Esse, nisi tempora quisquam amet dignissimos dicta animi expedita veritatis libero minus eligendi aliquam facilis explicabo nulla similique mollitia excepturi aliquid veniam beatae quod ipsa illum! Magnam consequuntur facilis placeat facere sed, maxime est rerum ex commodi iure? Quis! <br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, ex error magnam iusto cumque vitae, necessitatibus culpa iste beatae excepturi atque! Ipsa autem illum cumque accusantium doloremque tempora, optio molestiae aperiam enim ipsum quidem sed magnam fugit error amet corrupti, adipisci illo dolore! Expedita voluptates, amet magni praesentium assumenda, sint recusandae impedit commodi vitae aut officiis minus, eius omnis? Delectus ipsum cupiditate amet optio sequi laboriosam totam culpa vitae! Amet, iure officia a repellat ea deserunt aperiam quidem reprehenderit cum.<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, ex error magnam iusto cumque vitae, necessitatibus culpa iste beatae excepturi atque! Ipsa autem illum cumque accusantium doloremque tempora, optio molestiae aperiam enim ipsum quidem sed magnam fugit error amet corrupti, adipisci illo dolore! Expedita voluptates, amet magni praesentium assumenda, sint recusandae impedit commodi vitae aut officiis minus, eius omnis? Delectus ipsum cupiditate amet optio sequi laboriosam totam culpa vitae! Amet, iure officia a repellat ea deserunt aperiam quidem reprehenderit cum.</p>
+    </section>
+    <script>
+        let stars = document.getElementById ('stars')
+        let moon = document.getElementById ('moon')
+        let mountain_behind = document.getElementById ('mountain-behind')
+        let text = document.getElementById ('text')
+        let btn = document.getElementById ('btn')
+        let mountain_front = document.getElementById ('mountain-front')
+        let header = document.querySelector('header')
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1 + 'px';
+            mountain_behind.style.top = value * 0.05 + 'px';
+            mountain_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1 + 'px';
+            btn.style.marginTop = value * 3 + 'px';
+            header.style.top = value * 0.5 + 'px';
+})
+</script>
+</body>
+</html>
