@@ -166,3 +166,27 @@ header .switch span {
     font-size: 1em;
     color: #ffff;
 }
+
+#top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #363d9c;
+    z-index: 1000000;
+    border-radius: 10px;
+    padding: 10px 15px;
+    border: 1px solid white;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all .2s ease;
+}
+#top i {
+    color: white;
+}
+
+#top:hover {
+    box-shadow: 4px 4px 4px 0 #9eacb9;
+    opacity: 0.8;
+}
